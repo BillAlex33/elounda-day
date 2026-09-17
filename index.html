@@ -2,111 +2,79 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
-<meta name="theme-color" content="#0e2a32"/>
-<title>Elounda day</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
+<meta name="theme-color" content="#111111"/>
+<title>North of Mirabello</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet"/>
 <style>
-:root{--sea:#1c6b7a;--deep:#0e2a32;--sand:#f3eee6;--ink:#162226}
+:root{--bg:#f6f1ea;--ink:#161616;--mute:#6b6560;--line:#e4ddd4;--accent:#8a4a2f}
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html,body{margin:0;padding:0}
-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;background:var(--sand);color:var(--ink);line-height:1.45;padding-bottom:92px}
-header{background:#0e2a32 url('https://commons.wikimedia.org/wiki/Special:FilePath/Elounda.jpg?width=1400') center/cover;color:#fff;padding:68px 18px 26px}
-h1{margin:0 0 8px;font-size:34px;font-weight:650;letter-spacing:-.03em}
-header p{margin:0;font-size:16px;opacity:.92}
-.kicker{font-size:11px;letter-spacing:.14em;text-transform:uppercase;opacity:.8;margin-bottom:8px}
-main{padding:16px 14px 28px}
-h2{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--sea);margin:22px 0 10px}
-h3{font-size:20px;margin:0 0 8px}
-p{font-size:16px;margin:0 0 12px}
-.note{background:#dceef1;border-radius:14px;padding:14px;font-size:15px}
-.card{background:#fff;border-radius:18px;overflow:hidden;margin:0 0 14px;box-shadow:0 6px 20px rgba(14,42,50,.06)}
-.pad{padding:16px}
-.wide,.pics img{width:100%;object-fit:cover;display:block;background:#d7e0e3}
-.wide{height:210px}
-.pics{display:grid;grid-template-columns:1fr 1fr;gap:3px}
-.pics img{height:150px}
-iframe{width:100%;border:0;display:block;height:250px;background:#d7e0e3}
+body{background:var(--bg);color:var(--ink);font-family:Manrope,system-ui,sans-serif;font-size:16px;line-height:1.55;padding-bottom:84px}
+.top{display:flex;justify-content:space-between;padding:18px 20px 14px;border-bottom:1px solid var(--line);letter-spacing:.18em;text-transform:uppercase;font-size:10px;color:var(--mute)}
+.top b{color:var(--ink);font-weight:600;letter-spacing:.22em}
+.hero img{width:100%;height:62vh;min-height:320px;object-fit:cover;display:block}
+figcaption{padding:10px 20px 0;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
+.intro{padding:28px 20px 8px}
+.eyebrow{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin:0 0 12px}
+h1{font-family:Cormorant Garamond,Georgia,serif;font-weight:500;font-size:clamp(40px,11vw,64px);line-height:.95;letter-spacing:-.03em;margin:0 0 18px}
+.lede{font-family:Cormorant Garamond,Georgia,serif;font-size:22px;margin:0;line-height:1.35}
+.weather{margin:22px 20px;padding:16px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-size:13px;color:var(--mute)}
+.weather strong{color:var(--ink)}
+h2{font-family:Cormorant Garamond,Georgia,serif;font-size:34px;font-weight:500;margin:28px 20px 10px;letter-spacing:-.02em}
+.copy{padding:0 20px 14px;max-width:640px}
+.copy p{margin:0 0 12px}
+.full img{width:100%;height:48vh;min-height:240px;object-fit:cover;display:block}
+iframe{width:calc(100% - 40px);margin:0 20px 8px;border:0;height:240px;background:#ece7e0}
 iframe.windy{height:300px}
-.row{display:flex;gap:8px;padding:0 14px 14px;flex-wrap:wrap}
-a.btn,a.call{flex:1 1 136px;text-align:center;text-decoration:none;font-size:15px;font-weight:600;padding:12px 10px;border-radius:12px;color:#fff;background:var(--deep)}
-a.btn.alt{background:var(--sea)}
-a.call{background:#2c5a3c}
-.bar{position:fixed;left:0;right:0;bottom:0;background:rgba(14,42,50,.95);padding:10px 12px calc(10px + env(safe-area-inset-bottom));display:flex;gap:8px;z-index:20}
-.bar a{flex:1;color:#fff;text-align:center;text-decoration:none;font-size:13px;font-weight:650;padding:12px 6px;border-radius:12px;background:#1c6b7a}
-.bar a.ghost{background:transparent;border:1px solid rgba(255,255,255,.25)}
+.acts{display:flex;flex-wrap:wrap;gap:8px;padding:4px 20px 28px}
+.acts a{text-decoration:none;color:var(--ink);border:1px solid var(--ink);padding:11px 14px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:600}
+.acts a.filled{background:var(--ink);color:#fff}
+.quote{font-family:Cormorant Garamond,Georgia,serif;font-style:italic;font-size:28px;line-height:1.2;margin:8px 20px 28px}
+footer{padding:24px 20px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);border-top:1px solid var(--line)}
+.bar{position:fixed;left:0;right:0;bottom:0;background:#111;display:flex;padding:0 0 env(safe-area-inset-bottom)}
+.bar a{flex:1;color:#fff;text-align:center;text-decoration:none;font-size:10px;letter-spacing:.16em;text-transform:uppercase;padding:16px 6px;border-right:1px solid #2a2a2a}
 </style>
 </head>
 <body>
-<header>
-<div class="kicker">Agios Nikolaos · Elounda</div>
-<h1>Swim & walk</h1>
-<p>Sarantari first. Then either Malia + the walk from Potamos to Sisi, or Kolokytha.</p>
-</header>
-<main>
-<div class="note"><strong>Today, Thu 17 Sep.</strong> Showers and west wind, 20–24°C. Fri–Sun clearer. Sea ~26°C.</div>
-<h2>Live wind</h2>
-<div class="card">
-<iframe class="windy" title="Windy" src="https://embed.windy.com/embed2.html?lat=35.263&lon=25.723&zoom=10&overlay=wind&product=ecmwf&message=true&marker=true&calendar=now&type=map&location=coordinates&detail=true&metricWind=km%2Fh&metricTemp=%C2%B0C"></iframe>
-<div class="row"><a class="btn alt" href="https://www.windy.com/35.263/25.723">Open Windy</a></div>
+<div class="top"><b>North coast</b><span>Crete · September</span></div>
+<figure class="hero"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Isle_of_Crete,_Spinalonga_peninsula_beach_2019.jpg?width=1600" alt="Cove"/><figcaption>East of Elounda</figcaption></figure>
+<div class="intro">
+<p class="eyebrow">A short itinerary</p>
+<h1>Where the bay<br>turns quiet</h1>
+<p class="lede">One swim before the villages thicken. Then either the last of the palaces and a coastal walk, or a cove with almost nothing on it.</p>
 </div>
-<h2>Start</h2>
-<div class="card">
-<img class="wide" src="https://commons.wikimedia.org/wiki/Special:FilePath/Elounda.jpg?width=1400" alt="North coast"/>
-<div class="pad"><h3>Sarantari</h3><p>Small coves near Hersonissos. Quick swim and a short cliff walk.</p></div>
+<div class="weather"><strong>Thursday 17 September.</strong> Showers, a west wind, 20–24°C. Friday to Sunday opens again. Sea about 26°C.</div>
+<iframe class="windy" src="https://embed.windy.com/embed2.html?lat=35.263&lon=25.723&zoom=10&overlay=wind&product=ecmwf&message=true&marker=true&calendar=now&type=map&location=coordinates&detail=true&metricWind=km%2Fh&metricTemp=%C2%B0C"></iframe>
+<div class="acts"><a href="https://www.windy.com/35.263/25.723">Open the wind map</a></div>
+<h2>01 — Sarantari</h2>
+<div class="copy"><p>West of Hersonissos the coast breaks into small coves. A swim, a short walk on the rock, then move on.</p></div>
+<figure class="full"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Elounda.jpg?width=1600" alt="Coast"/></figure>
 <iframe src="https://maps.google.com/maps?q=Sarantari+Beach+Hersonissos&z=15&output=embed"></iframe>
-<div class="row">
-<a class="btn" href="https://maps.google.com/?q=Sarantari+Beach+Hersonissos">Open pin</a>
-<a class="btn alt" href="https://maps.google.com/?saddr=Current+Location&daddr=Sarantari+Beach+Hersonissos&dirflg=d">Drive here</a>
-</div>
-</div>
-<h2>Option A — ruins + walk</h2>
-<div class="card">
-<img class="wide" src="https://commons.wikimedia.org/wiki/Special:FilePath/Isle_of_Crete,_Spinalonga_peninsula_beach_2019.jpg?width=1400" alt="Coastal cove"/>
-<div class="pad">
-<h3>Malia palace, then Potamos</h3>
-<p>Palace sits just behind the beach. From the east end of <strong>Potamos Beach a walking path</strong> follows the coast to Sisi — over the headland, past Agia Varvara, into the harbour. On foot, not a drive.</p>
-<p>Skip the long walk if the wind is up today.</p>
-</div>
-<img class="wide" src="https://commons.wikimedia.org/wiki/Special:FilePath/Spinalonga,_Elounta.jpg?width=1400" alt="Bay"/>
+<div class="acts"><a class="filled" href="https://maps.google.com/?q=Sarantari+Beach+Hersonissos">Pin</a><a href="https://maps.google.com/?saddr=Current+Location&daddr=Sarantari+Beach+Hersonissos&dirflg=d">Drive</a></div>
+<h2>02 — Malia, then walk</h2>
+<div class="copy"><p>If Knossos and Phaistos were enough stone, skip this. If not: Malia is the other palace that still holds. The sea is immediately behind it.</p>
+<p><strong>From Potamos Beach the way to Sisi is a walking path</strong> — east along the water, over the headland, past Agia Varvara, into the harbour. Not a road.</p></div>
+<figure class="full"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Spinalonga,_Elounta.jpg?width=1600" alt="Bay"/></figure>
+<p class="quote">The path is the point. Sisi is only where it ends.</p>
 <iframe src="https://maps.google.com/maps?saddr=Potamos+Beach+Malia&daddr=Sisi+harbour+Crete&dirflg=w&output=embed"></iframe>
-<div class="row">
-<a class="btn" href="https://maps.google.com/?q=Potamos+Beach+Malia">Potamos</a>
-<a class="btn alt" href="https://www.google.com/maps/dir/?api=1&origin=Potamos+Beach+Malia&destination=Sisi+Crete&travelmode=walking">Walk to Sisi</a>
-</div>
-<div class="row">
-<a class="btn" href="https://maps.google.com/?q=Minoan+Palace+of+Malia">Palace</a>
-<a class="btn alt" href="https://www.komoot.com/smarttour/21795971">Komoot trail</a>
-</div>
-</div>
-<h2>Option B — quieter swim</h2>
-<div class="card">
-<img class="wide" src="https://commons.wikimedia.org/wiki/Special:FilePath/Isle_of_Crete,_Spinalonga_peninsula_beach_2019.jpg?width=1400" alt="Kolokytha"/>
-<div class="pad"><h3>Kolokytha</h3><p>Small cove near Elounda. Park at Agios Loukas, walk 500 m down.</p></div>
+<div class="acts"><a class="filled" href="https://www.google.com/maps/dir/?api=1&origin=Potamos+Beach+Malia&destination=Sisi+Crete&travelmode=walking">Walk to Sisi</a><a href="https://maps.google.com/?q=Potamos+Beach+Malia">Potamos</a><a href="https://www.komoot.com/smarttour/21795971">Komoot</a></div>
+<h2>03 — Kolokytha</h2>
+<div class="copy"><p>Skip the ruins. Park at Agios Loukas, walk five hundred metres down to a pale cove. Morning, or after three.</p></div>
+<figure class="full"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Isle_of_Crete,_Spinalonga_peninsula_beach_2019.jpg?width=1600" alt="Kolokytha"/></figure>
 <iframe src="https://maps.google.com/maps?q=Kolokytha+Beach+Elounda&z=14&output=embed"></iframe>
-<div class="row">
-<a class="btn" href="https://maps.google.com/?q=Kolokytha+Beach+Elounda">Open pin</a>
-<a class="btn alt" href="https://maps.google.com/?saddr=Current+Location&daddr=Kolokytha+Beach+Elounda&dirflg=d">Drive here</a>
-</div>
-</div>
-<h2>Dinner</h2>
-<div class="card">
-<img class="wide" src="https://commons.wikimedia.org/wiki/Special:FilePath/Spinalonga,_Elounta.jpg?width=1400" alt="Spinalonga"/>
-<div class="pad"><h3>Elounda / Plaka</h3><p>Mavro Provato in Louma, or Cayo in Plaka.</p></div>
+<div class="acts"><a class="filled" href="https://maps.google.com/?q=Kolokytha+Beach+Elounda">Pin</a><a href="https://maps.google.com/?saddr=Current+Location&daddr=Kolokytha+Beach+Elounda&dirflg=d">Drive</a></div>
+<h2>04 — Table</h2>
+<div class="copy"><p><strong>Mavro Provato</strong> in Louma. Small, Italian. Call first.</p><p><strong>Cayo</strong> in Plaka. Lazarou menus. Book.</p></div>
+<figure class="full"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Spinalonga,_Elounta.jpg?width=1600" alt="Spinalonga"/></figure>
 <iframe src="https://maps.google.com/maps?q=Plaka+Elounda+Crete&z=14&output=embed"></iframe>
-<div class="row">
-<a class="btn" href="https://maps.google.com/?q=Mavro+Provato+Epano+Loumas">Black Sheep</a>
-<a class="call" href="tel:+302841041205">Call</a>
-</div>
-<div class="row">
-<a class="btn" href="https://maps.google.com/?q=Cayo+Exclusive+Resort+Plaka">Cayo</a>
-<a class="call" href="tel:+302841044700">Call</a>
-</div>
-</div>
-</main>
+<div class="acts"><a class="filled" href="tel:+302841041205">Mavro Provato</a><a href="tel:+302841044700">Cayo</a></div>
+<footer>North of Mirabello · a private note for September</footer>
 <nav class="bar">
 <a href="https://www.windy.com/35.263/25.723">Wind</a>
 <a href="https://www.google.com/maps/dir/?api=1&origin=Potamos+Beach+Malia&destination=Sisi+Crete&travelmode=walking">Walk</a>
-<a class="ghost" href="https://maps.google.com/?q=Kolokytha+Beach+Elounda">Kolokytha</a>
+<a href="https://maps.google.com/?q=Kolokytha+Beach+Elounda">Cove</a>
 </nav>
 </body>
 </html>
