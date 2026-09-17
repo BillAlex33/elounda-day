@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0e2a32" />
+  <title>Elounda day</title>
+  <style>
+    :root { --sea:#1c6b7a; --deep:#0e2a32; --sand:#f3eee6; --ink:#162226; }
+    * { box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+    html,body { margin:0; padding:0; }
+    body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; background:var(--sand); color:var(--ink); line-height:1.45; padding-bottom:88px; }
+    header { background:#0e2a32 url("https://commons.wikimedia.org/wiki/Special:FilePath/Elounda.jpg?width=1400") center/cover; color:#fff; padding:72px 20px 28px; }
+    header h1 { margin:0 0 8px; font-size:34px; font-weight:650; letter-spacing:-0.03em; }
+    header p { margin:0; font-size:16px; opacity:.92; }
+    .kicker { font-size:11px; letter-spacing:.14em; text-transform:uppercase; opacity:.8; margin-bottom:8px; }
+    main { padding:16px 16px 24px; }
+    h2 { font-size:13px; letter-spacing:.12em; text-transform:uppercase; color:var(--sea); margin:22px 0 10px; }
+    h3 { font-size:20px; margin:0 0 8px; }
+    p { font-size:16px; margin:0 0 12px; }
+    .note { background:#dceef1; border-radius:14px; padding:14px; font-size:15px; }
+    .card { background:#fff; border-radius:18px; overflow:hidden; margin:0 0 14px; box-shadow:0 6px 20px rgba(14,42,50,.06); }
+    .card .pad { padding:16px; }
+    .card img { width:100%; height:210px; object-fit:cover; display:block; background:#d7e0e3; }
+    iframe { width:100%; border:0; display:block; height:260px; background:#d7e0e3; }
+    iframe.windy { height:320px; }
+    .row { display:flex; gap:8px; padding:0 16px 16px; flex-wrap:wrap; }
+    a.btn, a.call { flex:1 1 140px; text-align:center; text-decoration:none; font-size:15px; font-weight:600; padding:12px 10px; border-radius:12px; color:#fff; background:var(--deep); }
+    a.btn.alt { background:var(--sea); }
+    a.call { background:#2c5a3c; }
+    .bar { position:fixed; left:0; right:0; bottom:0; background:rgba(14,42,50,.94); padding:10px 12px calc(10px + env(safe-area-inset-bottom)); display:flex; gap:8px; z-index:20; }
+    .bar a { flex:1; color:#fff; text-align:center; text-decoration:none; font-size:13px; font-weight:650; padding:12px 6px; border-radius:12px; background:#1c6b7a; }
+    .bar a.ghost { background:transparent; border:1px solid rgba(255,255,255,.25); }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="kicker">Agios Nikolaos · Elounda</div>
+    <h1>Swim & walk</h1>
+    <p>Sarantari or Potamos in the morning. Kolokytha if you want it quieter. Dinner in Plaka.</p>
+  </header>
+  <main>
+    <div class="note"><strong>Today, Thu 17 Sep.</strong> Showers and west wind in Elounda, 20–24°C. Fri–Sun clearer. Sea ~26°C.</div>
+    <h2>Live wind</h2>
+    <div class="card">
+      <iframe class="windy" title="Windy Elounda" src="https://embed.windy.com/embed2.html?lat=35.263&lon=25.723&zoom=10&overlay=wind&product=ecmwf&message=true&marker=true&calendar=now&type=map&location=coordinates&detail=true&metricWind=km%2Fh&metricTemp=%C2%B0C"></iframe>
+      <div class="row"><a class="btn alt" href="https://www.windy.com/35.263/25.723">Open Windy</a></div>
+    </div>
+    <h2>Start</h2>
+    <div class="card">
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Elounda.jpg?width=1400" alt="Sarantari" />
+      <div class="pad"><h3>Sarantari</h3><p>Small coves near Hersonissos. Quick swim, short walk.</p></div>
+      <iframe title="Sarantari map" src="https://maps.google.com/maps?q=Sarantari+Beach+Hersonissos&z=15&output=embed"></iframe>
+      <div class="row">
+        <a class="btn" href="https://maps.google.com/?q=Sarantari+Beach+Hersonissos">Open pin</a>
+        <a class="btn alt" href="https://maps.google.com/?saddr=Current+Location&daddr=Sarantari+Beach+Hersonissos&dirflg=d">Drive here</a>
+      </div>
+    </div>
+    <h2>Option A</h2>
+    <div class="card">
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Isle_of_Crete,_Spinalonga_peninsula_beach_2019.jpg?width=1400" alt="Potamos / Kolokytha style beach" />
+      <div class="pad"><h3>Malia palace + Potamos</h3><p>Ruins, then the beach right behind. Path continues toward Sisi.</p></div>
+      <iframe title="Malia to Sisi" src="https://maps.google.com/maps?saddr=Minoan+Palace+of+Malia&daddr=Potamos+Beach+Malia+to:Sisi,+Crete&output=embed"></iframe>
+      <div class="row">
+        <a class="btn" href="https://maps.google.com/?q=Minoan+Palace+of+Malia">Palace</a>
+        <a class="btn alt" href="https://maps.google.com/?q=Potamos+Beach+Malia">Potamos</a>
+      </div>
+    </div>
+    <h2>Option B</h2>
+    <div class="card">
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Isle_of_Crete,_Spinalonga_peninsula_beach_2019.jpg?width=1400" alt="Kolokytha Beach" />
+      <div class="pad"><h3>Kolokytha</h3><p>Clear-water cove near Elounda. Park at Agios Loukas, walk 500 m.</p></div>
+      <iframe title="Kolokytha map" src="https://maps.google.com/maps?q=Kolokytha+Beach+Elounda&z=14&output=embed"></iframe>
+      <div class="row">
+        <a class="btn" href="https://maps.google.com/?q=Kolokytha+Beach+Elounda">Open pin</a>
+        <a class="btn alt" href="https://maps.google.com/?saddr=Current+Location&daddr=Kolokytha+Beach+Elounda&dirflg=d">Drive here</a>
+      </div>
+    </div>
+    <h2>Dinner</h2>
+    <div class="card">
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Spinalonga,_Elounta.jpg?width=1400" alt="Spinalonga" />
+      <div class="pad"><h3>Elounda / Plaka</h3><p>Mavro Provato in Louma, or Cayo in Plaka. Fish tavernas face Spinalonga.</p></div>
+      <iframe title="Plaka map" src="https://maps.google.com/maps?q=Plaka+Elounda+Crete&z=14&output=embed"></iframe>
+      <div class="row">
+        <a class="btn" href="https://maps.google.com/?q=Mavro+Provato+Epano+Loumas">Black Sheep</a>
+        <a class="call" href="tel:+302841041205">Call</a>
+      </div>
+      <div class="row">
+        <a class="btn" href="https://maps.google.com/?q=Cayo+Exclusive+Resort+Plaka">Cayo</a>
+        <a class="call" href="tel:+302841044700">Call</a>
+      </div>
+    </div>
+  </main>
+  <nav class="bar">
+    <a href="https://www.windy.com/35.263/25.723">Wind</a>
+    <a href="https://maps.google.com/?q=Kolokytha+Beach+Elounda">Kolokytha</a>
+    <a class="ghost" href="https://www.google.com/maps/dir/Agios+Nikolaos,+Greece/Sarantari+Beach,+Hersonissos/Minoan+Palace+of+Malia/Potamos+Beach,+Malia/Kolokytha+Beach/Plaka,+Elounda/">Route</a>
+  </nav>
+</body>
+</html>
